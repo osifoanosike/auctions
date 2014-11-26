@@ -1,0 +1,38 @@
+<h1>Auctions</h1>
+
+
+<div>
+	<%= form_for(@auctionItem, html: { multipart: true }) do |f|%>	
+		<%= render 'shared/error_messages'%>
+
+		<div class="form-field">
+			<%= f.label :name %>
+			<%= f.text_field :name, placeholder: "Enter Item Name" %>
+		</div>
+
+		<div class="form-field">
+			<%= f.label :description %>
+			<%= f.text_field :description, placeholder: "A little information about this item" %>
+		</div>
+
+		<div class="form-field">
+			<%= f.label :status %>
+			<%= f.text_field :status %>
+		</div>
+
+		<div class="form-field">
+			<%= f.label :quantity %>
+			<%= f.text_field :quantity, type:"number" %>
+		</div>
+
+		<div class="form-field">
+			<%= f.label :image, "Upload a cool photo of item" %>
+			<%= f.file_field :image %>
+		</div>
+
+		<div class="form-field">
+			<%= f.submit "Create Auction", class: "btn btn-primary"%>
+		</div>
+		
+	<%end%>
+</div>

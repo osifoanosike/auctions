@@ -1,0 +1,8 @@
+
+<% if @auctionItem.errors.any? %>
+	<div class="error-section">
+		<div class="alert alerty-error">
+			Oops! there are <%= pluralize(@auctionItem.errors.count, "error")  %> on ths form
+		</div>
+	</div>
+<% end %>
