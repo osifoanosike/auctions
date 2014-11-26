@@ -12,12 +12,12 @@ class AuctionItem < ActiveRecord::Base
 	# validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
     # Validate filename
     # validates_attachment_file_name :image, :matches => [/png\Z/, /jpe?g\Z/]
-    validates_attachment_file_name :image, :matches => [/png\Z/, /jpe?g\Z/]
+    # validates_attachment_file_name :image, :matches => [/png\Z/, /jpe?g\Z/]
 
-    validates_attachment :image,
-    	presence: true,
-	    content_type: { :content_type =>  ["image/jpg", "image/jpeg", "image/png", "image/gif"] },
-	    :size => { :in => 0..100.kilobytes }
+    # validates_attachment :image,
+    # 	presence: true,
+	   #  content_type: { :content_type =>  ["image/jpg", "image/jpeg", "image/png", "image/gif"] },
+	   #  :size => { :in => 0..100.kilobytes }
 
 	# def self.absolute_url(image_source)
 	# 	"#{root_path[0...-1]}/#{image_url(image_source)}"
