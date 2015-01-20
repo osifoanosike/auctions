@@ -21,7 +21,7 @@ class AuctionItemsController < ApplicationController
     @auctionItem.absolute_url =  "#{request.protocol}#{request.host_with_port}#{ @auctionItem.image}"
     
   	if @auctionItem.save
-  		flash[:success] = "Auction item was successfully added, #{@auctionItem.absolute_url}"
+  		flash[:success] = "Auction item was successfully added, #{@auctionItem.absolute_url}\nitem:#{ @auctionItem.image}\nhost with port: #{request.host_with_port}"
   		redirect_to auctions_path
   	else
   		render 'new'

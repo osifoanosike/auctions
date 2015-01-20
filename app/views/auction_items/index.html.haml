@@ -1,0 +1,21 @@
+%h1 Auctions
+
+
+= link_to 'Add Auction', new_auction_item_path
+.content.items
+    %ul.item-list
+        = @auction_items.each do  | item|
+
+            %li.item-list-item
+                %div
+                    %span= item.code
+                    %span= item.name
+
+                    %p= item.description
+                    %small= item.status
+                    %small= item.quantity
+
+                %div.item-page
+                    = image_tag( item.image.url(:original), width:"140")
+        <% end %>
+</ul>
